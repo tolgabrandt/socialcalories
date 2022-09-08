@@ -3,7 +3,7 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;900&display=swap');
 .cover {
-  background-image: url('assets/images/site-bg.png');
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/socialcalories001.appspot.com/o/site-bg.png?alt=media&token=e23245fb-56f1-4e48-b43e-6610eeffd162');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;

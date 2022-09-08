@@ -5,6 +5,9 @@ import { db, storage } from '../../firebase/config';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const AddPost = () => {
   const [categorie, setCategorie] = useState('Makale');
   const [ingredientsChange, setIngredientsChange] = useState(null);
@@ -93,6 +96,8 @@ const AddPost = () => {
 
       await addDoc(collection(db, 'posts'), data);
       setSuccess(true);
+      setIsPending(false);
+      toast.success('Başarıyla eklendi');
     } catch (err) {
       console.log(err);
     }
@@ -228,11 +233,20 @@ const AddPost = () => {
                     En az 2 malzeme gerekli
                   </button>
                 )}
-                {ingredients.length > 1 && <button>Gönder</button>}
+                {ingredients.length > 1 && (
+                  <button>
+                    {isPending ? <span className="loading"></span> : "Gönder"}
+                  </button>
+                )}
               </div>
             )}
-            {categorie === 'Makale' && <button>Gönder</button>}
+            {categorie === 'Makale' && (
+              <button>
+                {isPending ? <span className="loading"></span> : "Gönder"}
+              </button>
+            )}
             {success && <span>Başarılı</span>}
+            <ToastContainer />
           </section>
         </form>
       </section>
