@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;900&display=swap');
+.cover {
+  background-image: url('assets/images/site-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+@layer components {
+  .loading {
+    @apply w-4 h-4 rounded-full border-t-emerald-500 border-[2px] border-solid border-gray-200 animate-spin;
+  }
+  .loading-full {
+    @apply w-12 h-12 rounded-full border-t-emerald-500 border-[2px] border-solid border-gray-200 animate-spin;
+  }
+  .calculations {
+    @apply max-w-[340px] flex-auto flex h-[120px] text-white items-center justify-center flex-col gap-2;
+  }
+  .progress-bar {
+    @apply fixed top-0 left-0 right-0 h-1 bg-emerald-500 origin-[0%];
+  }
+
+  .colarize {
+    border-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(#02b1af),
+        color-stop(16%, #02b1af),
+        color-stop(16%, #d9f918),
+        color-stop(33%, #d9f918),
+        color-stop(33%, #7bda3d),
+        color-stop(49%, #7bda3d),
+        color-stop(49%, #61bfad),
+        color-stop(66%, #61bfad),
+        color-stop(66%, #fdc526),
+        color-stop(83%, #fdc526),
+        color-stop(83%, #61bfad),
+        to(#61bfad)
+      )
+      11;
+
+    border-bottom: 6px solid;
+  }
+}
+
+@layer base {
+  html {
+    font-family: 'Nunito Sans', sans-serif;
+  }
+  input {
+    @apply bg-white h-10 px-4 border border-gray-200 rounded-md;
+  }
+  select {
+    @apply bg-white h-10 px-4 border border-gray-200 rounded-md;
+  }
+  button {
+    @apply bg-emerald-500 text-white h-10 px-4 rounded-md;
+  }
+
+  textarea {
+    @apply bg-white  border border-gray-200 rounded-md;
+  }
+
+  :disabled {
+    @apply bg-gray-200;
+  }
+}
