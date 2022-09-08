@@ -52,7 +52,7 @@ const Sidebar = () => {
           )}
           {!user.birthDate && (
             <div className="text-sm text-gray-400">
-              <Link to="/dashboard/edit">Profili düzenle</Link>
+              <Link to="/dashboard/duzenle">Profili düzenle</Link>
             </div>
           )}
         </div>
@@ -60,10 +60,10 @@ const Sidebar = () => {
       <section>
         <div className="flex flex-col gap-4 py-4">
           <ul>
-            <Link to="/dashboard/edit">
+            <Link to="/dashboard/duzenle">
               <li
                 className={`flex items-center gap-6 px-6 py-4 hover:bg-gray-50 ${
-                  location.pathname === '/dashboard/edit' && 'bg-gray-50'
+                  location.pathname === '/dashboard/duzenle' && 'bg-gray-50'
                 }`}
               >
                 <Person className="text-lg" /> <span>Profil Bilgilerim</span>
@@ -79,10 +79,10 @@ const Sidebar = () => {
                 <CalendarDay /> <span>Diyet Programım</span>
               </li>
             </Link>
-            <Link to="/dashboard/messages">
+            <Link to="/dashboard/mesajlar">
               <li
                 className={`flex items-center gap-6 px-6 py-4 hover:bg-gray-50 ${
-                  location.pathname === '/dashboard/messages' && 'bg-gray-50'
+                  location.pathname === '/dashboard/mesajlar' && 'bg-gray-50'
                 }`}
               >
                 <ChatLeft /> <span>Mesajlar</span>

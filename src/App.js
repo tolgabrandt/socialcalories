@@ -27,6 +27,7 @@ import Orders from './pages/admin/Orders';
 import AllPosts from './pages/admin/AllPosts';
 import Settings from './pages/admin/Settings';
 import Bank from './pages/customer/Bank';
+import Contact from './pages/home/Contact';
 
 const App = () => {
   const { isAuthReady } = useContext(AuthContext);
@@ -47,9 +48,10 @@ const App = () => {
           <Route path="randevu" element={<Appointment />}></Route>
           <Route path="ideal-kilo-hesaplama" element={<WeightCalc />}></Route>
           <Route path="blog" element={<Blog />}></Route>
+          <Route path="iletisim" element={<Contact />}></Route>
           <Route path="blog/:blogId" element={<BlogPost />}></Route>
           <Route
-            path="/login"
+            path="/giris"
             element={
               <PrivateRoute>
                 <Login />
@@ -57,7 +59,7 @@ const App = () => {
             }
           ></Route>
           <Route
-            path="/register"
+            path="/kayit"
             element={
               <PrivateRoute>
                 <Register />
@@ -69,11 +71,11 @@ const App = () => {
 
         <Route path="/dashboard" element={<DashboardLayout />}>
           <Route index element={<Dashboard />}></Route>
-          <Route path="edit" element={<EditProfile />}></Route>
+          <Route path="duzenle" element={<EditProfile />}></Route>
           <Route path="program" element={<Program />}></Route>
           <Route path="bildirim" element={<Bank />}></Route>
-          <Route path="messages" element={<Messages />}></Route>
-          <Route path="messages/:messageId" element={<Message />}></Route>
+          <Route path="mesajlar" element={<Messages />}></Route>
+          <Route path="mesajlar/:messageId" element={<Message />}></Route>
         </Route>
 
         <Route

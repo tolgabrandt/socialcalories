@@ -20,8 +20,9 @@ const Navbar = () => {
         </section>
         <section className="flex gap-16">
           <div className=" hidden md:flex gap-2 md:gap-8 text-lg font-medium text-slate-500  items-center">
-            <Link to="blog"> Blog</Link>
-            <Link to="iletisim"> İletişim</Link>
+            <Link to="/blog"> Blog</Link>
+            <Link to="/iletisim"> İletişim</Link>
+            <Link to="/randevu"> Randevu</Link>
           </div>
           <div className="flex gap-4">
             {user?.role === 'admin' && (
@@ -30,7 +31,7 @@ const Navbar = () => {
               </Link>
             )}
             {PrivateElement(
-              <Link to="/login">
+              <Link to="/giris">
                 <button className="h-10">Giriş</button>
               </Link>,
               <>

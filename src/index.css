@@ -55,7 +55,7 @@
     font-family: 'Nunito Sans', sans-serif;
   }
   input {
-    @apply bg-white h-10 px-4 border border-gray-200 rounded-md;
+    @apply bg-white h-12 px-4 border border-gray-200 rounded-md;
   }
   select {
     @apply bg-white h-10 px-4 border border-gray-200 rounded-md;

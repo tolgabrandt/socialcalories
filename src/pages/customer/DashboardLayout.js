@@ -12,7 +12,7 @@ const DashboardLayout = () => {
     return (
       <div>
         <span>bu sayfaya giriş için yetkiniz yok, </span>
-        <Link className="text-emerald-500" to="/login">
+        <Link className="text-emerald-500" to="/giris">
           giriş yap
         </Link>
       </div>
