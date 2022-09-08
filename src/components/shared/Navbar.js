@@ -31,7 +31,7 @@ const Navbar = () => {
             )}
             {PrivateElement(
               <Link to="/login">
-                <button className="h-8">Giriş</button>
+                <button className="h-10">Giriş</button>
               </Link>,
               <>
                 <Link to="/dashboard">
