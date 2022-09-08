@@ -58,6 +58,10 @@ const BlogCard = ({
     );
   }
 
+  function createMarkup() {
+    return { __html: content };
+  }
+
   return (
     <>
       <motion.div
@@ -142,7 +146,7 @@ const BlogCard = ({
                     </span>
                   </div>
                 )}
-                {content}
+                <div dangerouslySetInnerHTML={createMarkup()}></div>
               </section>
               {params.blogId === shortName && (
                 <section className="flex flex-col gap-6 items-center">

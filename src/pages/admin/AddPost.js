@@ -2,6 +2,8 @@ import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
 import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
 import { useState } from 'react';
 import { db, storage } from '../../firebase/config';
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
 
 const AddPost = () => {
   const [categorie, setCategorie] = useState('Makale');
@@ -135,12 +137,13 @@ const AddPost = () => {
                 </span>
                 <span className="text-gray-600">"bu-bir-baslik-ornegidir"</span>
               </span>
-              <textarea
-                required
-                cols="30"
-                rows="10"
-                onChange={(e) => setContent(e.target.value)}
-              ></textarea>
+              <div className="min-h-[300px]">
+                <ReactQuill
+                  theme="snow"
+                  onChange={setContent}
+                  className="h-[250px]"
+                />
+              </div>
             </div>
             <div className="flex flex-col p-4 rounded-lg">
               <input
