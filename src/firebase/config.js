@@ -4,14 +4,14 @@ import { getAuth } from 'firebase/auth';
 import { getStorage, ref } from 'firebase/storage';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyDxzlxFHXvaqFwcUQRfRFYrK49ckfJen-c',
-  authDomain: 'socialcalories001.firebaseapp.com',
-  projectId: 'socialcalories001',
-  storageBucket: 'socialcalories001.appspot.com',
-  messagingSenderId: '191900348330',
-  appId: '1:191900348330:web:3001d60c1cf7e6a72e85d3',
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN",
+  databaseURL: "YOUR_DATABASE_URL",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_STORAGE_BUCKET",
+  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+  appId: "YOUR_APP_ID"
 };
-
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 export const auth = getAuth();
